@@ -17,7 +17,7 @@ namespace _KoeiromapTest
             _audioSource = GetComponent<AudioSource>();
         }
 
-        private async void Start()
+        private void Start()
         {
             playVoiceButton.OnClickAsObservable()
                 .Subscribe(_ => PlayVoice(inputField.text).Forget()).AddTo(this);
