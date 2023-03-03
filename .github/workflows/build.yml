@@ -3,8 +3,8 @@ name: Build
 env:
   UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
 
-# Controls when the action will run. 
-on: 
+# Controls when the action will run.
+on:
   workflow_dispatch: {}
   push:
     branches:
@@ -23,7 +23,7 @@ jobs:
         projectPath:
           - .
         unityVersion:
-          - 2022.2.0f1
+          - 2021.3.16f1
         targetPlatform:
          - WebGL
     steps:
@@ -32,7 +32,7 @@ jobs:
       with:
         lfs: true
         clean: false
-        
+
 #     Cache
     - uses: actions/cache@v3
       with:
@@ -45,6 +45,12 @@ jobs:
       with:
         unityVersion: ${{ matrix.unityVersion }}
         targetPlatform: ${{ matrix.targetPlatform }}
+
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@v4.4.0
+      with:
+        branch: gh-pages
+        folder: build
 
     # Output
     - uses: actions/upload-artifact@v3.1.1
