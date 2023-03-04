@@ -1,6 +1,6 @@
-# koeiromap Unity Test
+# Koeiromap Unity Test
 
-[koeiromap](http://koeiromap.rinna.jp/)をUnityから動かすテストプロジェクト
+[Koeiromap](http://koeiromap.rinna.jp/)をUnityから動かすテストプロジェクト
 
 # Demo
 
