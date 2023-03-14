@@ -8,7 +8,8 @@ namespace _KoeiromapTest
 {
     public class GetVoice
     {
-        private const string URL = "http://koeiromap-api.rinna.jp/api/inference/";
+        // private const string URL = "http://koeiromap-api.rinna.jp/api/inference/";
+        private const string URL = "https://api.rinna.co.jp/models/cttse/koeiro";
         public static async UniTask<VoiceResponse> Voice(string text)
         {
             var voiceParam = new VoiceParam()
