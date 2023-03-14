@@ -25,7 +25,6 @@ jobs:
         unityVersion:
           - 2021.3.16f1
         targetPlatform:
-         - StandaloneWindows64
          - WebGL
     steps:
     - name: Checkout
